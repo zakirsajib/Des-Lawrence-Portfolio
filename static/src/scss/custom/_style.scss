@@ -171,6 +171,16 @@ header{
 				}//paintings
 			}// grid
 		}//section 1
+		.installation-slides{
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			background-size: cover;
+			.slide{
+				-moz-background-size: cover;
+				-webkit-background-size: cover;
+				background-size: cover;
+			}
+		}
 }// fullpage
 
 /*

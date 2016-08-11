@@ -1,3 +1,5 @@
+<div class="container">
+	<div class="row">
 <div class="center-block">
 	<p>Des Lawrence (b. 1970, Wiltshire, UK ) studied at Glasgow School of Art and Goldsmiths College, London. He lives and works in London.</p>
 	<p>Des Lawrence’s ouvre includes painting, drawing, text and installation. The principal theme of his work is derived from current newspaper obituaries.</p>
@@ -10,4 +12,6 @@
 	<p>Download full CV <a href="#" target="_blank">here.</a></p><br/>
 	<p>Contact: <a href="mailto:deslawrence@hotmail.com" target="_blank">deslawrence@hotmail.com</a></p>
 	<p>Instagram</p>
+</div>
+	</div>
 </div>

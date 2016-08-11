@@ -48,8 +48,9 @@ $j(document).ready(function() {
 		responsiveHeight: 2000,
 		css3: true,
 		scrollBar: true,
-		paddingTop:'200px',
-		paddingBottom: '200px',
+		//paddingTop:'200px',
+		//paddingBottom: '200px',
+		verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
             if(anchorLink == 'paintings'){

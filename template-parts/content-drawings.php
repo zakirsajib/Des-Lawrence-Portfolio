@@ -1,3 +1,5 @@
+<div class="container">
+	<div class="row">
 <div class="grid">
   <div class="grid-sizer"></div>
   	<div class="drawings">
@@ -29,4 +31,4 @@
 	    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" /></a>
 	  </div>
   	</div>
-</div>
+</div></div></div>
