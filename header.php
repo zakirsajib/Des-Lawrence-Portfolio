@@ -25,10 +25,10 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'des-lawrence' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		
+		<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 					<div class="site-branding">
 						<?php
 						if ( is_front_page() && is_home() ) : ?>
@@ -40,9 +40,35 @@
 					</div><!-- .site-branding -->
 				</div>
 				
-				<div class="col-md-4 section-update"></div>
+				<div class="col-lg-4 col-md-4 col-sm-4 section-update col-xs-4"></div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				    </div>
+					<!-- Desktop menu || only visible on Desktop-->
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right" id="menu">
+					        <li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><em>Work</em> <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li data-menuanchor="paintings"><a href="#paintings">Paintings</a></li>
+								<li data-menuanchor="drawings"><a href="#drawings">Drawings</a></li>
+								<li data-menuanchor="installation"><a href="#installation">Installation views</a></li>
+					          </ul>
+					        </li>
+					        <li data-menuanchor="information"><a class="info" href="#information">Information</a></li>
+					    </ul>
+					</div><!-- /.navbar-collapse -->
+				</div>
 				
-				<div class="col-md-4">
+				<!-- mobile menu || only visible on mobile,tablet-->
+				<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right" id="menu">
 				        <li class="dropdown">
 				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><em>Work</em> <span class="caret"></span></a>
@@ -54,9 +80,12 @@
 				        </li>
 				        <li data-menuanchor="information"><a class="info" href="#information">Information</a></li>
 				    </ul>
-				</div>
+				</div><!-- /.navbar-collapse -->
+				
+				
+				
 			</div>
-		</div>
+		</div></nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

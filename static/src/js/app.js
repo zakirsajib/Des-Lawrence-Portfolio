@@ -7,14 +7,9 @@ $j(document).ready(function() {
         showPercentage: false,
         loaderVPos: '50%'
     });
-    /*-------------------------------------------------------------------*/
-	/*  2. Makes the height of all selected elements (".match-height")
-	/*  exactly equal. Requires jQuery matchHeight plugin.
-	/*-------------------------------------------------------------------*/
-    //$j('.match-height').matchHeight();
     
     /*-------------------------------------------------------------------*/
-	/*  3. magnificPopup plugin
+	/*  2. magnificPopup plugin
 	/*-------------------------------------------------------------------*/
 	$j('.paintings').magnificPopup({
         delegate: 'a', // the selector for gallery item
@@ -36,7 +31,7 @@ $j(document).ready(function() {
  	
 	
 	/*-------------------------------------------------------------------*/
-	/*  4. fullPage plugin
+	/*  3. fullPage plugin
 	/*-------------------------------------------------------------------*/
 
 	$j('#fullpage').fullpage({
@@ -46,11 +41,12 @@ $j(document).ready(function() {
 		//navigationPosition: 'right',
 		//responsiveWidth: 960,
 		responsiveHeight: 2000,
-		css3: true,
-		scrollBar: true,
+		//css3: true,
+		//scrollBar: true,
+		//scrollingSpeed: 1000,
 		//paddingTop:'200px',
 		//paddingBottom: '200px',
-		verticalCentered: true,
+		//verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
             if(anchorLink == 'paintings'){
@@ -100,7 +96,7 @@ $j(document).ready(function() {
 
 	
 	/*-------------------------------------------------------------------*/
-	/*  5. isotope.pkgd.js, imagesloaded.pkgd.js
+	/*  4. isotope.pkgd.js, imagesloaded.pkgd.js
 	/*-------------------------------------------------------------------*/
 
 	// init Isotope after all images have loaded
@@ -120,10 +116,10 @@ $j(document).ready(function() {
 	
 	   	
 	/*-------------------------------------------------------------------*/
-	/*  6. display Information section when the menu is clicked.
+	/*  5. display 'Information section' when the menu is clicked.
 	/*-------------------------------------------------------------------*/	
 		
-		var clone = $j("#fullpage #section3").clone(); // making zeh' clones!
+		var clone = $j("#fullpage #section3").clone(); // making information' clones!
 		$j("#fullpage #section3").remove();            // original is gone
 		
 		
