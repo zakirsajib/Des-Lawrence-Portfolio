@@ -21,6 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+	
+	<div id="preloader"><div id="status">&nbsp;</div></div>
+	
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'des-lawrence' ); ?></a>
 

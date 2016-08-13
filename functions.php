@@ -109,7 +109,6 @@ function des_lawrence_scripts() {
 	
 	wp_enqueue_style( 'wpcore', get_template_directory_uri() . '/assets/wpcore/wpcore.css'); // wpcore css
 	
-	wp_enqueue_style( 'jpreloader', get_template_directory_uri() . '/assets/jpreloader/css/jpreloader.css'); // jpreloader css
 	
 	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/node_modules/magnific-popup/dist/magnific-popup.css'); // magnific-popup css
 	
@@ -131,17 +130,11 @@ function des_lawrence_scripts() {
 	wp_enqueue_script( 'isotope-cells-by-row', get_template_directory_uri() . '/node_modules/
 	/isotope-cells-by-row/cells-by-row.js', array( 'jquery' ),'', true ); // isotope-cells-by-row js
 	
-
 	
 	wp_enqueue_script( 'des-lawrence-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'des-lawrence-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
-	
-	wp_enqueue_script( 'jpreloader', get_template_directory_uri() . '/assets/jpreloader/js/jpreloader.min.js', array( 'jquery' ),'', true ); // jpreloader js
-	
-	//wp_enqueue_script( 'matchheight', get_template_directory_uri() . '/node_modules/
-	///jquery-match-height/dist/jquery.matchHeight-min.js', array( 'jquery' ),'', true ); // matchheight js
 	
 	wp_enqueue_script( 'scrolloverflow', get_template_directory_uri() . '/node_modules/
 	/fullpage.js/vendors/scrolloverflow.min.js', array( 'jquery' ),'', true ); // fullPage js

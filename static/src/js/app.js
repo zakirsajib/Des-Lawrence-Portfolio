@@ -1,13 +1,6 @@
 $j = jQuery.noConflict();
 $j(document).ready(function() {	
-	/*-------------------------------------------------------------------*/
-	/*  1. Preloader. Requires jQuery jpreloader plugin.
-	/*-------------------------------------------------------------------*/
-     $j('body').jpreLoader({
-        showPercentage: false,
-        loaderVPos: '50%'
-    });
-    
+   
     /*-------------------------------------------------------------------*/
 	/*  2. magnificPopup plugin
 	/*-------------------------------------------------------------------*/
@@ -100,8 +93,8 @@ $j(document).ready(function() {
 	/*-------------------------------------------------------------------*/
 
 	// init Isotope after all images have loaded
-		var $grid = $j('.grid').imagesLoaded( function() {
-		$grid.isotope({
+		var $grid1 = $j('.grid').imagesLoaded( function() {
+		$grid1.isotope({
 	    	itemSelector: '.grid-item',
 	    	layoutMode: 'cellsByRow',
 			percentPosition: true,
@@ -113,6 +106,26 @@ $j(document).ready(function() {
 	    	}
 	  	});
 	});
+	
+	
+	// init Isotope
+/*
+	var $grid = $j('.drawings grid').isotope({
+	  itemSelector: '.grid-item',
+	  percentPosition: true,
+	  masonry: {
+	    columnWidth: '.grid-sizer',
+	    gutter: 50
+	  }
+	});
+	// layout Isotope after each image loads
+	$grid.imagesLoaded().progress( function() {
+	  $grid.isotope('layout');
+	});  
+*/
+
+	
+	
 	
 	   	
 	/*-------------------------------------------------------------------*/
@@ -151,8 +164,17 @@ $j(document).ready(function() {
          
     });
 */
-
-	
+	/*-------------------------------------------------------------------*/
+	/*  6. Image hover
+	/*-------------------------------------------------------------------*/	
+	$j(".grid .paintings .grid-item, .grid .drawings .grid-item").hover(function() { // Mouse over
+	  $j(this).siblings().stop().fadeTo(300, 0.3);
+	  $j(this).parent().siblings().stop().fadeTo(300, 0.3); 
+	}, function() { // Mouse out
+	  $j(this).siblings().stop().fadeTo(300, 1);
+	  $j(this).parent().siblings().stop().fadeTo(300, 1);
+	});
+		
 		
 });
 
@@ -187,3 +209,15 @@ $j(window).load(function(){
     
 });
 */
+
+	/*-------------------------------------------------------------------*/
+	/*  1. Preloader. Requires jQuery jpreloader plugin.
+	/*-------------------------------------------------------------------*/
+
+$j(window).load(function() { // makes sure the whole site is loaded
+  $j('#status').fadeOut(); // will first fade out the loading animation
+  $j('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  $j('body').delay(350).css({
+    'overflow': 'visible'
+  });
+})

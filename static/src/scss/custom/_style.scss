@@ -117,17 +117,32 @@ header{
 /*  PRELOADER
 /*---------------------------------------------------------------------*/
 
-#jpreOverlay {
-  background-color: #0d0c0d;
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
 }
 
-#jpreLoader {
-  width: 100%;
-  height: 5px;
-}
-
-#jpreBar {
-  background-color: #69b139;
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(../img/45.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
 }
 
 
@@ -162,7 +177,6 @@ header{
 			    	margin: 150px 0;
 					.grid-item {
 			 		  	width: 300px;
-						// height: 50px;	
 						float: left;
 						padding: 40px;
 						margin: 40px 0 0;
@@ -172,12 +186,20 @@ header{
 					  	}//img
 					 }// grid-item
 				}//paintings
-			}// grid
+			}// grid			
 		}// section 0
 	#section1{
+		.section-title,
+		.section-subtitle{
+			text-align: center;	
+		}
+		.section-subtitle{
+			font-style: italic;
+			font-size: small;
+		}
 		.grid {
 	  		background: #fff;
-	  		margin: 150px auto;
+	  		margin: 0 auto 150px;
 	  		max-width: 900px;
 			&:after {
 			    content: '';
@@ -186,21 +208,13 @@ header{
 			}
 			.grid-sizer {
 			  width: 300px;
-			  height: 300px;
+			  //height: 300px;
 			}
-			.section-title,
-			.section-subtitle{
-				text-align: center;	
-			}
-			.section-subtitle{
-				font-style: italic;
-				font-size: small;
-			}
+			
 			.drawings{
-		    	margin: 150px 0;
+		    	margin: 0;
 				.grid-item {
 		 		  	width: 300px;
-					// height: 50px;	
 					float: left;
 					padding: 40px;
 					margin: 40px 0 0;
@@ -213,14 +227,16 @@ header{
 		}// grid
 	}//section 1
 	.installation-slides{
-		-moz-background-size: cover;
-		-webkit-background-size: cover;
-		background-size: cover;
+		-moz-background-size: contain;
+		-webkit-background-size: contain;
+		background-size: contain;
+		height: 100%!important;
 		.slide{
-			-moz-background-size: contain;
-			-webkit-background-size: contain;
-			background-size: contain;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			background-size: cover;
 			background-repeat: no-repeat;
+			background-position: center center;
 		}
 		.installation-heading{
 			padding: 40px 0;

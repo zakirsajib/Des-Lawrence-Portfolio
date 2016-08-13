@@ -1,38 +1,22 @@
 <div class="container">
 	<div class="row">
-		<div class="grid">
-		<div class="section-title">Drawings</div>
-		<div class="section-subtitle">Sub title of Drawings</div>
-		  <div class="grid-sizer"></div>
-		  	<div class="drawings">
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" /></a>
-			  </div>
-			  <div class="grid-item">
-			    <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" /></a>
-			  </div>
-		  	</div>
+		<div class="section-title"><?php the_field('drawings_title')?></div>
+		<div class="section-subtitle"><?php the_field('drawings_sub_title')?></div>
+
+		<div class="grid drawings-grid">
+		  	<?php 
+				$images = get_field('drawings_gallery');
+				if( $images ): ?>
+				    <div class="drawings"><div class="grid-sizer"></div>
+				        <?php foreach( $images as $image ): ?>
+				            <div class="grid-item">
+				                <a href="<?php echo $image['url']; ?>" title="<?php echo $image['caption']; ?>">
+				                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
+				                </a>
+				            </div>
+				        <?php endforeach; ?>
+				    </div>
+				<?php endif; ?>
 		</div>
 	</div>
 </div>
