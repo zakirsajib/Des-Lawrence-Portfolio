@@ -102,10 +102,12 @@ add_action( 'widgets_init', 'des_lawrence_widgets_init' );
  * Enqueue scripts and styles.
  */
 function des_lawrence_scripts() {
-	wp_enqueue_style( 'des-lawrence-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'des-lawrence-style', get_stylesheet_uri() );	
 	
-	wp_enqueue_style( 'bootstrap3', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css'); // magnific-popup css
-
+	wp_enqueue_style( 'bootstrap3', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css'); 
+	
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.min.css'); 
+	
 	
 	wp_enqueue_style( 'wpcore', get_template_directory_uri() . '/assets/wpcore/wpcore.css'); // wpcore css
 	
@@ -115,9 +117,10 @@ function des_lawrence_scripts() {
 	wp_enqueue_style( 'fullPage', get_template_directory_uri() . '/node_modules/fullpage.js/jquery.fullPage.css'); // fullpage.js css
 	
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/static/dist/css/main.css');
-	
-	
+		
 	wp_enqueue_script( 'twitter-bootstrap-script', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ),'', true );
+	
+	
 	
 	
 	wp_enqueue_script( 'isotope-layout', get_template_directory_uri() . '/node_modules/
@@ -146,6 +149,8 @@ function des_lawrence_scripts() {
 	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/node_modules/
 	/magnific-popup/dist/jquery.magnific-popup.min.js', array( 'jquery' ),'', true ); // magnific-popup js
 
+	
+	
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/static/dist/js/app.min.js', array('jquery'), '20151215', true );
 
 
@@ -179,3 +184,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+require get_template_directory() . '/inc/work.php';

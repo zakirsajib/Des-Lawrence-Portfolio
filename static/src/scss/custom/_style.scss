@@ -10,6 +10,7 @@ html{
 body {
   font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, sans-serif;
   font-size: 16px;
+  overflow: hidden;
 }
 
 a {
@@ -256,9 +257,38 @@ header{
 
 
 /*---------------------------------------------------------------------*/
-/*  fullpage 1st section top spacing
+/*  Accordion
 /*---------------------------------------------------------------------*/
-
+.panel-group{
+	.panel-default{
+		background-color: #fff;
+		border: 0;
+		border-color: #fff;
+		border-radius: 0;
+		box-shadow: none;
+		.panel-heading{
+			background-color: #fff;
+			border: 0;
+			border-color: #fff;
+			padding: 0;
+		}
+		.panel-collapse>.panel-body{
+			border: 0;
+			.media-left,
+			.media-body{
+				display: inline;
+				float: left;
+			}
+			.media-left{
+				width: 15%;
+			}
+			.media-body{
+				width: 85%;
+				color: #666;
+			}
+		}
+	}
+}
 
 /*-------------------------------------------------------------------*/
 /*  magnificPopup Overlay Adjustments

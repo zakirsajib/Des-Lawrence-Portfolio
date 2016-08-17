@@ -37,9 +37,10 @@ $j(document).ready(function() {
 		//css3: true,
 		//scrollBar: true,
 		//scrollingSpeed: 1000,
-		//paddingTop:'200px',
-		//paddingBottom: '200px',
-		//verticalCentered: true,
+		//paddingTop:'40px',
+		//paddingBottom: '40px',
+		//autoScrolling: true,
+		verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
             if(anchorLink == 'paintings'){
