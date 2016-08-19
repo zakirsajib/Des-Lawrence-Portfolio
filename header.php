@@ -20,10 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
-	<div id="preloader"><div id="status">&nbsp;</div></div>
-	
-<div id="page" class="site">
+	<div id="page" class="site"><div id="preloader"><div id="status">&nbsp;</div></div>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'des-lawrence' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -42,7 +39,11 @@
 					</div><!-- .site-branding -->
 				</div>
 				
-				<div class="col-lg-4 col-md-4 col-sm-4 section-update col-xs-4"></div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="section-update"></div>
+					<div class="img-title-update"></div>
+				</div>
+				
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 					<div class="navbar-header">
 				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

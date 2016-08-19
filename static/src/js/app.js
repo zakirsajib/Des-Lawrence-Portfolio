@@ -171,11 +171,34 @@ $j(document).ready(function() {
 	$j(".grid .paintings .grid-item, .grid .drawings .grid-item").hover(function() { // Mouse over
 	  $j(this).siblings().stop().fadeTo(300, 0.3);
 	  $j(this).parent().siblings().stop().fadeTo(300, 0.3); 
+	  
 	}, function() { // Mouse out
 	  $j(this).siblings().stop().fadeTo(300, 1);
 	  $j(this).parent().siblings().stop().fadeTo(300, 1);
 	});
-		
+	
+	/*-------------------------------------------------------------------*/
+	/*  7. Preloader. Requires jQuery jpreloader plugin.
+	/*-------------------------------------------------------------------*/
+
+	$j(window).load(function() { // makes sure the whole site is loaded
+	  $j('#status').fadeOut(); // will first fade out the loading animation
+	  $j('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+	  $j('body').delay(350).css({
+	    'overflow': 'visible'
+	  });
+	})
+	
+	/*-------------------------------------------------------------------*/
+	/*  8. Get Image title and put on header specific location
+	/*-------------------------------------------------------------------*/
+	
+	$j(".grid .paintings .grid-item a, .grid .drawings .grid-item a").hover(function() {
+		var img_title = $j('img', this).attr('title');
+		$j('.img-title-update').text(img_title);
+	}, function() { // Mouse out
+		$j('.img-title-update').text('');
+	});
 		
 });
 
@@ -211,14 +234,3 @@ $j(window).load(function(){
 });
 */
 
-	/*-------------------------------------------------------------------*/
-	/*  1. Preloader. Requires jQuery jpreloader plugin.
-	/*-------------------------------------------------------------------*/
-
-$j(window).load(function() { // makes sure the whole site is loaded
-  $j('#status').fadeOut(); // will first fade out the loading animation
-  $j('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-  $j('body').delay(350).css({
-    'overflow': 'visible'
-  });
-})

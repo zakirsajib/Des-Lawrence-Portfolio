@@ -8,8 +8,8 @@
 				    <div class="paintings"><div class="grid-sizer"></div>
 				        <?php foreach( $images as $image ): ?>
 				            <div class="grid-item">
-				                <a href="<?php echo $image['url']; ?>" title="<?php echo $image['caption']; ?>">
-				                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+				                <a href="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>">
+				                     <img src="<?php echo $image['sizes']['large']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>" />
 				                </a>
 				            </div>
 				        <?php endforeach; ?>

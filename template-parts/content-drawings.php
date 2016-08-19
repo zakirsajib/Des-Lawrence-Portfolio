@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="section-title"><?php the_field('drawings_title')?></div>
-		<div class="section-subtitle"><?php the_field('drawings_sub_title')?></div>
+<!-- 		<div class="section-subtitle"><?php the_field('drawings_sub_title')?></div> -->
 
 		<div class="grid drawings-grid">
 		  	<?php 
@@ -11,7 +11,7 @@
 				        <?php foreach( $images as $image ): ?>
 				            <div class="grid-item">
 				                <a href="<?php echo $image['url']; ?>" title="<?php echo $image['caption']; ?>">
-				                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"/>
+				                     <img src="<?php echo $image['sizes']['large']; ?>" title="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>"/>
 				                </a>
 				            </div>
 				        <?php endforeach; ?>

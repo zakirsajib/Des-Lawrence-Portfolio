@@ -40,6 +40,11 @@ header{
 	.section-update{
 		text-align: center;
 	}
+	.img-title-update{
+		text-align: center;
+		font-style: italic;
+		font-size: small;
+	}
 }
 
 /*---------------------------------------------------------------------*/
@@ -77,11 +82,20 @@ header{
       }
     }
   }
-  .dropdown-menu > li > a {
-    &:hover, &:focus {
-      background-color: transparent;
-    }
-  }
+  .dropdown-menu {
+  		border: 0;
+  		box-shadow: none;
+  		-webkit-box-shadow: none;
+  		border-radius: 0;
+  		-webkit-border-radius: 0;
+  		left:0!important;	
+	  	> li > a {
+	    &:hover, &:focus {
+	      background-color: transparent;
+	      font-style: italic;
+	    }
+	  }
+	}
   .navbar-nav .open {
     > a {
       background-color: transparent;

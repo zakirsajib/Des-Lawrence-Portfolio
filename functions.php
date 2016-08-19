@@ -64,6 +64,7 @@ function des_lawrence_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	add_image_size( 'big-image', 2500 ); // 2500 pixels wide (and unlimited height)
 }
 endif;
 add_action( 'after_setup_theme', 'des_lawrence_setup' );
