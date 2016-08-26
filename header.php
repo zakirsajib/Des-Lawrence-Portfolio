@@ -59,6 +59,7 @@
 					        <li class="dropdown">
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><em>Work</em> <span class="caret"></span></a>
 					          <ul class="dropdown-menu">
+						          <li data-menuanchor="home"><a href="#home"></a></li>
 					            <li data-menuanchor="paintings"><a href="#paintings">Paintings</a></li>
 								<li data-menuanchor="drawings"><a href="#drawings">Drawings</a></li>
 								<li data-menuanchor="installation"><a href="#installation">Installation views</a></li>
@@ -76,6 +77,7 @@
 				        <li class="dropdown">
 				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><em>Work</em> <span class="caret"></span></a>
 				          <ul class="dropdown-menu">
+					          <li data-menuanchor="home"><a href="#home"></a></li>
 				            <li data-menuanchor="paintings"><a href="#paintings">Paintings</a></li>
 							<li data-menuanchor="drawings"><a href="#drawings">Drawings</a></li>
 							<li data-menuanchor="installation"><a href="#installation">Installation views</a></li>

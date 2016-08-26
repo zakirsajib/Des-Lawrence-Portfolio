@@ -1,7 +1,6 @@
 <div class="container">
 	<div class="row">
 		<div class="grid paintings-grid">
-			
 				<?php 
 				$images = get_field('paintings_gallery');
 				if( $images ): ?>

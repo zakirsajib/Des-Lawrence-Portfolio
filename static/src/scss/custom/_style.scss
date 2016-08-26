@@ -115,9 +115,10 @@ header{
 }
 
 .information-section{
-	margin: 0;
+	height: 100vh;
+	margin: 20em 0 0;
 	.center-block{
-		padding: 0 15%;
+		padding: 0 10%;
 		p{
 			margin: 0 0 20px;
 		}
@@ -174,6 +175,15 @@ header{
 /* ---- grid ---- */
 #fullpage{ 
 	#section0{
+		height: 100vh;
+		.big-img{
+			padding: 5em 0 0;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+	#section1{
+		height: 100vh;
 		.grid {
 		  	background: #fff;
 		    margin: 150px auto;
@@ -203,7 +213,8 @@ header{
 				}//paintings
 			}// grid			
 		}// section 0
-	#section1{
+	#section2{
+		height: 100vh;
 		.section-title,
 		.section-subtitle{
 			text-align: center;	
@@ -242,10 +253,12 @@ header{
 		}// grid
 	}//section 1
 	.installation-slides{
-		-moz-background-size: contain;
-		-webkit-background-size: contain;
-		background-size: contain;
-		height: 100%!important;
+		//height: 100vh;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		background-size: cover;
+		//height: 100%!important;
+		margin-bottom: 10em;
 		.slide{
 			-moz-background-size: cover;
 			-webkit-background-size: cover;
@@ -265,7 +278,6 @@ header{
 				font-size: small;
 			}
 		}
-		
 	}
 }// fullpage
 

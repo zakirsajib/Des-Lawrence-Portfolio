@@ -7,16 +7,19 @@ get_header();?>
 			<?php
 			while ( have_posts() ) : the_post();?>
 				<div id="fullpage">
-				    <div class="section" id="section0">
-					    <?php get_template_part( 'template-parts/content', 'paintings' );?>
+					<div class="section" id="section0">
+					    <?php get_template_part( 'template-parts/content', 'big' );?>
 				    </div>
 				    <div class="section" id="section1">
+					    <?php get_template_part( 'template-parts/content', 'paintings' );?>
+				    </div>
+				    <div class="section" id="section2">
 					    <?php get_template_part( 'template-parts/content', 'drawings' );?>
 				    </div>
-				    <div class="section installation-slides" id="section2">
+				    <div class="section installation-slides" id="section3">
 					    <?php get_template_part( 'template-parts/content', 'installation' );?>
 					</div>
-				    <div class="section" id="section3">
+				    <div class="section" id="section4">
 					    <?php get_template_part( 'template-parts/content', 'information' );?>
 					</div>
 				</div>

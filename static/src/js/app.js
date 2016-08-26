@@ -29,20 +29,24 @@ $j(document).ready(function() {
 
 	$j('#fullpage').fullpage({
 		menu: '#menu',
-		anchors:['paintings', 'drawings', 'installation', 'information'],
+		anchors:['home', 'paintings', 'drawings', 'installation', 'information'],
 		//navigation: true,
 		//navigationPosition: 'right',
 		//responsiveWidth: 960,
 		responsiveHeight: 2000,
+		//fitToSection: true,
 		//css3: true,
 		//scrollBar: true,
 		//scrollingSpeed: 1000,
 		//paddingTop:'40px',
 		//paddingBottom: '40px',
-		//autoScrolling: true,
-		verticalCentered: true,
+		//autoScrolling: false,
+		//verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
+            if(anchorLink == 'home'){
+                $j('.section-update').text("");
+            }
             if(anchorLink == 'paintings'){
                 $j('.section-update').text("Paintings");
             }
@@ -133,8 +137,8 @@ $j(document).ready(function() {
 	/*  5. display 'Information section' when the menu is clicked.
 	/*-------------------------------------------------------------------*/	
 		
-		var clone = $j("#fullpage #section3").clone(); // making information' clones!
-		$j("#fullpage #section3").remove();            // original is gone
+		var clone = $j("#fullpage #section4").clone(); // making information' clones!
+		$j("#fullpage #section4").remove();            // original is gone
 		
 		
 		$j('.nav li .info').click(function(){

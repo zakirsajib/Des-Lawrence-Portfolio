@@ -138,14 +138,15 @@ function des_lawrence_scripts() {
 	wp_enqueue_script( 'des-lawrence-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'des-lawrence-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	
-	
-	wp_enqueue_script( 'scrolloverflow', get_template_directory_uri() . '/node_modules/
-	/fullpage.js/vendors/scrolloverflow.min.js', array( 'jquery' ),'', true ); // fullPage js
 
 	
 	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/node_modules/
-	/fullpage.js/jquery.fullPage.js', array( 'jquery' ),'', true ); // fullPage js
+	/fullpage.js/jquery.fullPage.js', array( 'jquery' ),'', false ); // fullPage js
+	
+	
+	wp_enqueue_script( 'scrolloverflow', get_template_directory_uri() . '/node_modules/
+	/fullpage.js/vendors/scrolloverflow.min.js', array( 'jquery' ),'', false ); // scrolloverflow js
+	
 	
 	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/node_modules/
 	/magnific-popup/dist/jquery.magnific-popup.min.js', array( 'jquery' ),'', true ); // magnific-popup js
