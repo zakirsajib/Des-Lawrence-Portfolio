@@ -44,20 +44,31 @@ $j(document).ready(function() {
 		//verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
+            //$j('header').css('display', 'none');
             if(anchorLink == 'home'){
                 $j('.section-update').text("");
+                $j('header#masthead').css('display', 'none');
+                $j('header#masthead-home-only').css('display','block');
             }
             if(anchorLink == 'paintings'){
                 $j('.section-update').text("Paintings");
+                $j('header#masthead').css('display', 'block');
+                $j('header#masthead-home-only').css('display','none');
             }
             if(anchorLink == 'drawings'){
                 $j('.section-update').text("Drawings");
+                $j('header#masthead').css('display', 'block');
+                $j('header#masthead-home-only').css('display','none');
             }
             if(anchorLink == 'installation'){
                 $j('.section-update').text("Installation views");
+                $j('header#masthead').css('display', 'block');
+                $j('header#masthead-home-only').css('display','none');
             }
             if(anchorLink == 'information'){
                 $j('.section-update').text("Information");
+                $j('header#masthead').css('display', 'block');
+                $j('header#masthead-home-only').css('display','none');
             }
         }
 		
