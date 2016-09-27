@@ -21,7 +21,10 @@ a {
   }
 }
 
-
+.site {
+    height: 100%;
+    overflow: hidden;
+}
 
 /* Fixed header
 * --------------------------------------- */
@@ -45,6 +48,10 @@ header{
 		font-style: italic;
 		font-size: small;
 	}
+}
+
+header#masthead{
+	display: none;
 }
 
 header#masthead-home-only{
@@ -172,18 +179,20 @@ header#masthead-home-only{
 /* ---- grid ---- */
 #fullpage{ 
 	#section0{
+		//height: calc(100vh - 40px)!important;
 		.big-img{
-			padding: 5em 0 0;
+			padding: 0;
 			width: 50%;
 			margin: 0 auto;
-			height: 100vh;
+			//height: 100vh;
 		}
 	}
 	#section1{
-		height: 100vh;
+		//height: 100vh;
+		//height: calc(100vh - 40px)!important;
 		.grid {
 		  	background: #fff;
-		    margin: 150px auto;
+		    margin: 0 auto;
 		    max-width: 900px;
 				&:after {
 				    content: '';
@@ -196,7 +205,8 @@ header#masthead-home-only{
 				}
 				
 				.paintings{
-			    	margin: 150px 0;
+			    	margin: 0;
+			    	//height: calc(100vh - 40px)!important;
 					.grid-item {
 			 		  	width: 300px;
 						float: left;
@@ -211,7 +221,8 @@ header#masthead-home-only{
 			}// grid			
 		}// section 0
 	#section2{
-		height: 100vh;
+		//height: 100vh;
+		//height: calc(100vh - 40px)!important;
 		.section-title,
 		.section-subtitle{
 			text-align: center;	
@@ -222,7 +233,7 @@ header#masthead-home-only{
 		}
 		.grid {
 	  		background: #fff;
-	  		margin: 0 auto 150px;
+	  		margin: 0 auto;
 	  		max-width: 900px;
 			&:after {
 			    content: '';
@@ -236,6 +247,7 @@ header#masthead-home-only{
 			
 			.drawings{
 		    	margin: 0;
+		    	//height: calc(100vh - 40px)!important;
 				.grid-item {
 		 		  	width: 300px;
 					float: left;
@@ -250,7 +262,7 @@ header#masthead-home-only{
 		}// grid
 	}//section 1
 	.installation-slides{
-		height: calc(100vh - 40px)!important;
+		//height: calc(100vh - 40px)!important;
 		//-moz-background-size: cover;
 		//-webkit-background-size: cover;
 		//background-size: cover;
@@ -290,7 +302,8 @@ header#masthead-home-only{
 		}
 	}
 	div#section4{
-		height: 100vh!important;
+		//height: calc(100vh - 40px)!important;
+		//height: calc(100vh-40px)!important;
 		.information-section{
 			//height: 100vh;
 			//margin: 20em 0 0;
@@ -353,4 +366,55 @@ header#masthead-home-only{
 .mfp-title{
 	color: #000;
 	font-size: 12px;
+}
+
+/*-------------------------------------------------------------------*/
+/*  Responsive
+/*-------------------------------------------------------------------*/
+@media (max-width: 768px){
+	header#masthead-home-only {
+		.navbar-default .navbar-collapse{
+			background: #fff;
+		}
+	}
+	
+	#fullpage #section0 .big-img{
+		padding: 0;
+		width: 40%;
+	}
+}
+@media (max-width: 736px){
+	header#masthead-home-only {
+		.navbar-default .navbar-collapse{
+			background: #fff;
+		}
+	}
+}
+
+@media (max-width: 320px){
+	.site {
+		overflow: scroll;
+		header#masthead-home-only {
+			.site-branding .site-title{
+				text-align: center;
+			}
+		}
+		#fullpage {
+			div#section4{
+				margin: 150px 0;
+				.panel-group .panel-default .panel-collapse>.panel-body {
+					.media-left{
+						width: 100%;
+					}
+					.media-body{
+						width: 100%;	
+					}
+				}
+			}
+			#section0 .big-img{
+				padding: 0;
+				width: 25%;
+			}
+		}
+	}// site
 }

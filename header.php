@@ -86,11 +86,10 @@
 				        <li data-menuanchor="information"><a class="info" href="#information">Information</a></li>
 				    </ul>
 				</div><!-- /.navbar-collapse -->
-				
-				
-				
 			</div>
-		</div></nav>
+			</div>
+		</div>
+		</nav>
 	</header><!-- #masthead -->
 	
 	<header id="masthead" class="site-header" role="banner">
@@ -141,7 +140,7 @@
 				</div>
 				
 				<!-- mobile menu || only visible on mobile,tablet-->
-				<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+			<div class="hidden-lg hidden-md hidden-sm col-xs-12">
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 					<ul class="nav navbar-nav navbar-right" id="menu">
 				        <li class="dropdown">
@@ -157,7 +156,9 @@
 				    </ul>
 				</div><!-- /.navbar-collapse -->
 			</div>
-		</div></nav>
+		</div>
+		</div>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -10,7 +10,16 @@ $j(document).ready(function() {
         gallery: {
           enabled:true,
           tCounter: '<span class="mfp-counter">Paintings %curr% of %total%</span>' // markup of counter
-        }
+        },
+        callbacks: {
+            beforeOpen: function(){
+                var mfp = $j.magnificPopup.instance;
+                mfp.items.unshift({
+				    src: "http://localhost/des-lawrence/wp-content/uploads/2016/08/paintings-cover.jpg"
+				});
+				mfp.updateItemHTML();
+            },
+        } //callbacks
     });
     $j('.drawings').magnificPopup({
         delegate: 'a', // the selector for gallery item
@@ -18,11 +27,19 @@ $j(document).ready(function() {
         gallery: {
           enabled:true,
           tCounter: '<span class="mfp-counter">Drawings %curr% of %total%</span>' // markup of counter
-        }
-    });
-
- 	
-	
+        },
+        callbacks: {
+            beforeOpen: function(){
+                var mfp = $j.magnificPopup.instance;
+                mfp.items.unshift({
+				    src: "http://localhost/des-lawrence/wp-content/uploads/2016/08/drawings-cover.jpg"
+				});
+				mfp.updateItemHTML();
+            },
+        } //callbacks
+    });	 
+           
+    
 	/*-------------------------------------------------------------------*/
 	/*  3. fullPage plugin
 	/*-------------------------------------------------------------------*/
@@ -38,69 +55,40 @@ $j(document).ready(function() {
 		//css3: true,
 		//scrollBar: true,
 		//scrollingSpeed: 1000,
-		//paddingTop:'40px',
-		//paddingBottom: '40px',
+		paddingTop:'50px',
+		paddingBottom: '0',
 		//autoScrolling: false,
+		//bigSectionsDestination: 'top',
 		//verticalCentered: true,
 		afterLoad: function(anchorLink, index){
             var loadedSection = $j(this);
-            //$j('header').css('display', 'none');
             if(anchorLink == 'home'){
                 $j('.section-update').text("");
-                $j('header#masthead').css('display', 'none');
-                $j('header#masthead-home-only').css('display','block');
+                $j('header#masthead').fadeOut('fast');
+                $j('header#masthead-home-only').fadeIn('slow');
             }
             if(anchorLink == 'paintings'){
                 $j('.section-update').text("Paintings");
-                $j('header#masthead').css('display', 'block');
-                $j('header#masthead-home-only').css('display','none');
+                $j('header#masthead-home-only').fadeOut('fast');
+                $j('header#masthead').fadeIn('slow');
+                
             }
             if(anchorLink == 'drawings'){
                 $j('.section-update').text("Drawings");
-                $j('header#masthead').css('display', 'block');
-                $j('header#masthead-home-only').css('display','none');
+                $j('header#masthead').fadeIn('slow');
+                $j('header#masthead-home-only').fadeOut('fast');
             }
             if(anchorLink == 'installation'){
                 $j('.section-update').text("Installation views");
-                $j('header#masthead').css('display', 'block');
-                $j('header#masthead-home-only').css('display','none');
+                $j('header#masthead').fadeIn('slow');
+                $j('header#masthead-home-only').fadeOut('fast');
             }
             if(anchorLink == 'information'){
                 $j('.section-update').text("Information");
-                $j('header#masthead').css('display', 'block');
-                $j('header#masthead-home-only').css('display','none');
+                $j('header#masthead').fadeIn('slow');
+                $j('header#masthead-home-only').fadeOut('fast');
             }
         }
-		
-		
-/*
-		onLeave: function(index, nextIndex, direction){
-            var leavingSection = $j(this);
-			
-			//after leaving section 1
-			if(index == 1 && direction =='down'){
-                $j('.section-update').text("Drawings");
-            }
-            //after leaving section 2
-            else if(index == 2 && direction =='down'){
-                $j('.section-update').text("Installation Views");
-            }
-            //after leaving section 3
-            else if(index == 3 && direction =='down'){
-                $j('.section-update').text("Information");
-            }
-			
-            else if(index == 2 && direction == 'up'){
-                $j('.section-update').text("Paintings");
-            }
-            else if(index == 3 && direction == 'up'){
-                $j('.section-update').text("Drawings");
-            }
-            else if(index == 4 && direction == 'up'){
-                $j('.section-update').text("Installation Views");
-            }
-        }
-*/
 	});
 
 	
@@ -122,27 +110,7 @@ $j(document).ready(function() {
 	    	}
 	  	});
 	});
-	
-	
-	// init Isotope
-/*
-	var $grid = $j('.drawings grid').isotope({
-	  itemSelector: '.grid-item',
-	  percentPosition: true,
-	  masonry: {
-	    columnWidth: '.grid-sizer',
-	    gutter: 50
-	  }
-	});
-	// layout Isotope after each image loads
-	$grid.imagesLoaded().progress( function() {
-	  $grid.isotope('layout');
-	});  
-*/
-
-	
-	
-	
+		
 	   	
 	/*-------------------------------------------------------------------*/
 	/*  5. display 'Information section' when the menu is clicked.
@@ -156,30 +124,6 @@ $j(document).ready(function() {
 			$j("#fullpage").append(clone);                // appears to have returned
 		});
 
-/*
-	$j(".paintings a").hover(function(){
- 
-        // Get the current title
-        var title = $j(this).attr("title");
- 
-        // Store it in a temporary attribute
-        $j(this).attr("tmp_title", title);
- 
-        // Set the title to nothing so we don't see the tooltips
-        $j(this).attr("title","");
-         
-    });
- 
-  $j(".paintings a").click(function(){// Fired when we leave the element
- 
-        // Retrieve the title from the temporary attribute
-        var title = $j(this).attr("tmp_title");
- 
-        // Return the title to what it was
-        $j(this).attr("title", title);
-         
-    });
-*/
 	/*-------------------------------------------------------------------*/
 	/*  6. Image hover
 	/*-------------------------------------------------------------------*/	
@@ -216,36 +160,3 @@ $j(document).ready(function() {
 	});
 		
 });
-
-
-/*
-$j(window).load(function(){
-
-    var $container = $j('.grid');
-   
-    // initialize Isotope
-    $container.isotope({
-      // options...
-      resizable: false, // enable normal resizing
-      // set columnWidth to a percentage of container width
-	  masonry: { 
-	     columnWidth: $container.width() / 4 
-	  },
-    });
-    
-    $j(window).on('resize', function(){ 
-	    if ($j(window).width() < 768) { 
-		    $container.isotope({ columns: 3 });
-		} 
-		if ($j(window).width() > 768) { 
-			$container.isotope({ columns: 3 });
-		}
-		if ($j(window).width() <= 320) { 
-		    $container.isotope({ columns: 2 });
-		} 
-	});
-    
-    
-});
-*/
-

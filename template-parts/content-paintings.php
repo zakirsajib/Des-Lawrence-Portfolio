@@ -13,6 +13,9 @@
 				            </div>
 				        <?php endforeach; ?>
 				    </div>
+				    
+				    <div class="painting-cover"></div>
+				    
 				<?php endif; ?>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="section-title"><?php the_field('drawings_title')?></div>
+<!-- 		<div class="section-title"><?php the_field('drawings_title')?></div> -->
 <!-- 		<div class="section-subtitle"><?php the_field('drawings_sub_title')?></div> -->
 
 		<div class="grid drawings-grid">
